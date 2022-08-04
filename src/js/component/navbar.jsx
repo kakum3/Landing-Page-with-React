@@ -9,7 +9,7 @@ const NavBar = () => {
  </button>
  <div className="collapse navbar-collapse justify-content-end me-5" id="navbarNavAltMarkup">
    <div className="navbar-nav">
-	 <a className="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+	 <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
 	 <a className="nav-item nav-link" href="#">About</a>
 	 <a className="nav-item nav-link" href="#">Services</a>
 	 <a className="nav-item nav-link" href="#">Contract</a>
