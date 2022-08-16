@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
-//componente a exportar
+
 const Footer = () => {
-return(<footer className="footer text-light bg-dark px-5 pt-3 pb-4 m-0 text-center ">
-Copyright @ Your Website 2022
-</footer>)
-}
-
-//exportando el componente deseado
-export default Footer;
+	return(
+	<footer className="footer w-100 bg-dark text-center">
+		<div className="container-fluid p-3">
+			<span className="text-muted">Footer &copy; Jesus Espartero</span>
+		</div>
+	</footer>
+	
+	);
+};
+export default Footer

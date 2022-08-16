@@ -1,28 +1,32 @@
-import React from 'react';
-import PropType from "prop-types";
+import React from "react";
 
 
 const Card = (props) => {
+    
   return (
-<div className="card" style={{width: '20rem'}}>
-  <img src="https://picsum.photos/550/400" className="card-img-top " alt="..."></img>
-  <div className="card-body">
-    <h5 className="card-title text-center">{props.title}</h5>
-    <p className="card-text text-center">{props.description}</p>
-  </div>
-    <div className="card-footer text-center p-3">
-    <a href={props.buttonUrl} className="btn btn-primary">{props.buttonLabel}</a>
-  </div>
- </div>);
-};
-
-Card.propTypes = {
-	title: PropType.string,
-  imageUrl: PropType.string,
-	description: PropType.string,
-	buttonUrl: PropType.string,
-	buttonLabel: PropType.string,
+    <div className="container-fluid mb-5">
+      <div className="row">
+        {props.card.map((item, i) => {
+          return (
+            <div key={i} className="col-sm-12 col-md-6 col-lg-3">
+              <div className="card mb-3">
+                <img src={item.image} className="card-img-top" />
+                <div className="card-body">
+                  <h5 className="card-title">{item.title}</h5>
+                  <p className="card-text">{item.description}</p>
+                  <a href={item.url} className="btn btn-primary">
+                    Go link
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 export default Card;
+
 
 
